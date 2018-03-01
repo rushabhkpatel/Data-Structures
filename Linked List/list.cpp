@@ -3,17 +3,19 @@
 #include "list.h"
 using namespace std;
 
-void display(Node* h) {
-    Node* t = h;
+extern Node* head;
+
+void display() {
+    Node* t = head;
     while(t != NULL) {
-        cout << " " << t->key;
+        cout << t->key << " ";
         t = t->next;
     }
     cout << "\n";
 }
 
-void addEnd(int k, Node* h) {
-    Node* temp = h;
+void addEnd(int k) {
+    Node* temp = head;
     Node* t = (Node*)malloc(sizeof(Node));
     t->key = k;
     t->next = NULL;
@@ -23,11 +25,11 @@ void addEnd(int k, Node* h) {
     temp->next = t;
 }
 
-void deleteNode(int k, Node* h) {
-    Node* t = h;
+void deleteNode(int k) {
+    Node* t = head;
     Node* pre = NULL;
     if(t->key == k) {
-        h = h->next;
+        head = head->next;
     }else {
         while(t->key != k && t->next != NULL){
             pre = t;

@@ -7,9 +7,9 @@ struct Node {
 };
 
 
-void display(Node* h);
-void addEnd(int k, Node* h);
-void deleteNode(int k, Node* h);
+void display();
+void addEnd(int k);
+void deleteNode(int k);
 
 
 #endif // LIST_H_INCLUDED
