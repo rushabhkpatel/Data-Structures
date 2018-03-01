@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1519481600 source:c:\users\kalpesh g patel\desktop\linkedlist\list.cpp
+	<stdlib.h>
+	<iostream>
+	"list.h"
+
+1519480544 source:c:\users\kalpesh g patel\desktop\linkedlist\main.cpp
+	<iostream>
+	"list.h"
+	<stdlib.h>
+
+1519481635 c:\users\kalpesh g patel\desktop\linkedlist\list.h
+
