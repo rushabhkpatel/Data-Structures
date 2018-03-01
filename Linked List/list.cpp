@@ -19,10 +19,15 @@ void addEnd(int k) {
     Node* t = (Node*)malloc(sizeof(Node));
     t->key = k;
     t->next = NULL;
-    while(temp->next != NULL) {
-        temp = temp->next;
+    if(head == NULL){
+        head = t;
     }
-    temp->next = t;
+    else{
+        while(temp->next != NULL) {
+            temp = temp->next;
+        }
+        temp->next = t;
+    }
 }
 
 void deleteNode(int k) {

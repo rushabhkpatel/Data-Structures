@@ -3,9 +3,8 @@
 
 struct Node {
     int key;
-    Node* next;
+    Node* next = NULL;
 };
-
 
 void display();
 void addEnd(int k);
