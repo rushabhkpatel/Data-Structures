@@ -4,7 +4,7 @@
 using namespace std;
 
 extern Node* head;
-
+extern int length;
 void display() {
     Node* t = head;
     while(t != NULL) {
@@ -28,6 +28,7 @@ void addEnd(int k) {
         }
         temp->next = t;
     }
+    length++;
 }
 
 void deleteNode(int k) {
@@ -46,4 +47,40 @@ void deleteNode(int k) {
             pre->next = t->next;
         }
     }
+    length--;
 }
+
+
+void insertAtPos(int k, int pos) {
+    Node* t = (Node*)malloc(sizeof(Node));
+    t->key = k;
+    t->next = NULL;
+    if(head == NULL){
+        head = t;
+    }else{
+        if(pos == 0){
+            t->next = head;
+            head = t;
+        }else if(pos >= length){
+            Node *pres = head;
+            Node *prev = NULL;
+            for(int i = 0; i < length; i++){
+                prev = pres;
+                pres = pres->next;
+            }
+            prev->next = t;
+            t->next = pres;
+        }else{
+            Node *pres = head;
+            Node *prev = NULL;
+            for(int i = 0; i < pos; i++){
+                prev = pres;
+                pres = pres->next;
+            }
+            prev->next = t;
+            t->next = pres;
+        }
+    }
+    length++;
+}
+
