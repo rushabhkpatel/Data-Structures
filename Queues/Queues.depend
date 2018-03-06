@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1520246619 source:c:\users\kalpesh g patel\desktop\queues\main.cpp
+	<iostream>
+	"queue.h"
+
+1520246328 c:\users\kalpesh g patel\desktop\queues\queue.h
+
+1520247064 source:c:\users\kalpesh g patel\desktop\queues\queue.cpp
+	<stdlib.h>
+	<iostream>
+	"queue.h"
+
